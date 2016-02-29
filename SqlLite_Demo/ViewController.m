@@ -18,7 +18,28 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    BOOL success = NO;
+
+    
+    success = [[DBManager getSharedInstance]saveData:@"darshan" department:@"IOS" year:@"2012"];
+    
+    
+    if (success) {
+        
+        NSLog(@"Success%hhd",success);
+    }
+    else
+    {
+        NSLog(@"fail%hhd",success);
+    }
+    
+    
+    NSMutableArray *data = [[DBManager getSharedInstance]getalldata];
+     NSLog(@"All data %@",data);
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

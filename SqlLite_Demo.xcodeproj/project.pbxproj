@@ -21,6 +21,8 @@
 		831AE48E1C10240500B2C47C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831AE4701C10240500B2C47C /* UIKit.framework */; };
 		831AE4961C10240500B2C47C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 831AE4941C10240500B2C47C /* InfoPlist.strings */; };
 		831AE4981C10240500B2C47C /* SqlLite_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 831AE4971C10240500B2C47C /* SqlLite_DemoTests.m */; };
+		831AE4A21C10241F00B2C47C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 831AE4A11C10241F00B2C47C /* libsqlite3.dylib */; };
+		831AE4A51C10246900B2C47C /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 831AE4A41C10246900B2C47C /* DBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		831AE4931C10240500B2C47C /* SqlLite_DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SqlLite_DemoTests-Info.plist"; sourceTree = "<group>"; };
 		831AE4951C10240500B2C47C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		831AE4971C10240500B2C47C /* SqlLite_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqlLite_DemoTests.m; sourceTree = "<group>"; };
+		831AE4A11C10241F00B2C47C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		831AE4A31C10246900B2C47C /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		831AE4A41C10246900B2C47C /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831AE4A21C10241F00B2C47C /* libsqlite3.dylib in Frameworks */,
 				831AE46F1C10240500B2C47C /* CoreGraphics.framework in Frameworks */,
 				831AE4711C10240500B2C47C /* UIKit.framework in Frameworks */,
 				831AE46D1C10240500B2C47C /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		831AE46B1C10240500B2C47C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				831AE4A11C10241F00B2C47C /* libsqlite3.dylib */,
 				831AE46C1C10240500B2C47C /* Foundation.framework */,
 				831AE46E1C10240500B2C47C /* CoreGraphics.framework */,
 				831AE4701C10240500B2C47C /* UIKit.framework */,
@@ -119,6 +126,8 @@
 				831AE4821C10240500B2C47C /* ViewController.m */,
 				831AE4841C10240500B2C47C /* Images.xcassets */,
 				831AE4731C10240500B2C47C /* Supporting Files */,
+				831AE4A31C10246900B2C47C /* DBManager.h */,
+				831AE4A41C10246900B2C47C /* DBManager.m */,
 			);
 			path = SqlLite_Demo;
 			sourceTree = "<group>";
@@ -252,6 +261,7 @@
 				831AE4831C10240500B2C47C /* ViewController.m in Sources */,
 				831AE47D1C10240500B2C47C /* AppDelegate.m in Sources */,
 				831AE4791C10240500B2C47C /* main.m in Sources */,
+				831AE4A51C10246900B2C47C /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
