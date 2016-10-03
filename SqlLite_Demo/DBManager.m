@@ -2,8 +2,8 @@
 //  DBManager.m
 //  SqlLite_Demo
 //
-//  Created by Ashish Chauhan on 03/12/15.
-//  Copyright (c) 2015 Ashish Chauhan. All rights reserved.
+//  Created by Gamex
+//  Copyright (c) 2015 Gamex All rights reserved.
 //
 
 #import "DBManager.h"
@@ -154,6 +154,34 @@ static sqlite3_stmt *statement = nil;
             return nil;
         }
 
+
+-(BOOL)delete_Student:(NSString *)otherName
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *deleteTable = [NSString stringWithFormat:@"delete from studentsDetail where name=\"%@\"",otherName];
+        const char *query_deleteTable = [deleteTable UTF8String];
+        sqlite3_prepare_v2(database, query_deleteTable,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            
+            NSLog(@"DATA FROM OTHER MDN DELETED");
+            sqlite3_finalize(statement);
+            sqlite3_close(database);
+            return YES;
+        }
+        else{
+            NSLog(@"DATA FRM OTHER MDN not FOUND");
+            return NO;
+        }
+        sqlite3_finalize(statement);
+    }
+    NSLog(@"Error in finding other mdn");
+    sqlite3_close(database);
+    return NO;
+    
+}
 
 @end
 

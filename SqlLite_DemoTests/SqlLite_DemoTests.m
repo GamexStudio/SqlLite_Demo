@@ -2,8 +2,8 @@
 //  SqlLite_DemoTests.m
 //  SqlLite_DemoTests
 //
-//  Created by Ashish Chauhan on 03/12/15.
-//  Copyright (c) 2015 Ashish Chauhan. All rights reserved.
+//  Created by Gamex on 03/12/15.
+//  Copyright (c) 2015 Gamex. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

@@ -2,8 +2,8 @@
 //  ViewController.m
 //  SqlLite_Demo
 //
-//  Created by Ashish Chauhan on 03/12/15.
-//  Copyright (c) 2015 Ashish Chauhan. All rights reserved.
+//  Created by Gamex on 03/12/15.
+//  Copyright (c) 2015 Gamex. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -22,7 +22,7 @@
     BOOL success = NO;
 
     
-    success = [[DBManager getSharedInstance]saveData:@"darshan" department:@"IOS" year:@"2012"];
+    success = [[DBManager getSharedInstance]saveData:@"PIXER" department:@"IOS" year:@"2012"];
     
     
     if (success) {
@@ -34,6 +34,14 @@
         NSLog(@"fail%hhd",success);
     }
     
+    
+    BOOL isdeleted = [[DBManager getSharedInstance] delete_Student:@"Gamex"];
+    
+    if (isdeleted) {
+        
+         NSLog(@"data deleted Successfully");
+        
+    }
     
     NSMutableArray *data = [[DBManager getSharedInstance]getalldata];
      NSLog(@"All data %@",data);
